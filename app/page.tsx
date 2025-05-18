@@ -1,3 +1,4 @@
+import CartColumn from "@/components/organisms/CartColumn";
 import Header from "@/components/organisms/Header";
 import ProductsColumn from "@/components/organisms/ProductsColumn";
 import UsersColumn from "@/components/organisms/UsersColumn";
@@ -11,7 +12,7 @@ export default function Home() {
 
         <ProductsColumn />
         <UsersColumn />
-        <ProductsColumn />
+        <CartColumn />
 
       </div>
     </main>

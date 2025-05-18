@@ -10,4 +10,7 @@ export enum EIconName {
 
     ADD = 'add',
     ARROW_RIGHT = 'arrowRight',
+
+    LOCATION = 'location',
+    PHONE = 'phone',
 }

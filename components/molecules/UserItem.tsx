@@ -15,7 +15,7 @@ export const UserItem = ({ user, handleClick }: IUserItemProps) => {
         className=" mb-4"
         width={40}
         height={20}
-        style={{ width: "auto", height: "auto" }}
+        style={{ width: "auto", height: "auto", borderRadius: "50%" }}
         src={user.id % 2 === 0 ? '/woman.webp' : '/man.webp'}
         alt={user.username}
       />
@@ -33,11 +33,18 @@ export const UserItem = ({ user, handleClick }: IUserItemProps) => {
         <div className="flex  justify-between items-center mt-2 w-[95%]">
           <div className="flex flex-col justify-between items-start ">
 
-            <span className="text-gray-600 dark:text-gray-400 text-xs">
-              ${user.phone}
+            <span className="flex gap-1 text-gray-600 dark:text-gray-400 text-xs">
+              <span>
+                <IconMaker name={EIconName.PHONE} />
+              </span>
+              {user.phone}
             </span>
 
-            <span className=" dark:text-gray-400 text-xs">
+            <span className=" flex gap-1 dark:text-gray-400 text-xs">
+              <span>
+                <IconMaker name={EIconName.LOCATION} />
+              </span>
+
               {user?.address?.city} ({user?.address?.street})
             </span>
 

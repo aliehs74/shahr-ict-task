@@ -4,11 +4,11 @@ import { RootState } from '../store';
 import { IProduct } from '@/types/product';
 
 interface ISelectedProductsState {
-  products: IProduct[];
+  data: IProduct[];
 }
 
 const initialState: ISelectedProductsState = {
-  products: [],
+  data: [],
 };
 
 export const selectedProductsSlice = createSlice({
@@ -16,17 +16,17 @@ export const selectedProductsSlice = createSlice({
   initialState,
   reducers: {
     toggleProduct: (state, action: PayloadAction<IProduct>) => {
-      const index = state.products.findIndex(product => product.id === action.payload.id);
-      
+      const index = state.data.findIndex(product => product.id === action.payload.id);
+
       if (index === -1) {
-        state.products.push(action.payload);
+        state.data.push(action.payload);
       } else {
-        state.products.splice(index, 1);
+        state.data.splice(index, 1);
       }
     },
   },
 });
 
 export const { toggleProduct } = selectedProductsSlice.actions;
-export const selectSelectedProducts = (state: RootState) => state.selectedProducts.products;
+export const selectSelectedProducts = (state: RootState) => state.selectedProducts.data;
 export default selectedProductsSlice.reducer;
