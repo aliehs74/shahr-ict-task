@@ -18,7 +18,7 @@ export const ProductItem = ({ product, handleClick }: { product: IProduct, handl
 
             <div className="flex flex-col w-5/6">
 
-                <h3 className="font-bold text-xs truncate  dark:text-white">
+                <h3 className="font-bold text-xs truncate max-w-[90%] dark:text-white">
                     {product.title}
                 </h3>
 

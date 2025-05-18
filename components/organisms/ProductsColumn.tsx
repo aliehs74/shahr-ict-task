@@ -44,9 +44,11 @@ const ProductsColumn = () => {
 
     const handleInfiniteScroll = (e: MouseEvent<HTMLDivElement>) => {
         const { scrollTop, scrollHeight, clientHeight } = e.currentTarget;
+        const isFinishedScroll = scrollHeight - scrollTop - clientHeight < 200  //less than 200px from bottom
+        const isRemainData = data && data.length >= page * 10  //data isnt completly feched
 
-        if (scrollHeight - scrollTop - clientHeight < 200) { //less than 200px from bottom
-            setPage(page + 1);
+        if (isFinishedScroll && isRemainData) {
+            setPage(page + 1)
         }
     };
 
