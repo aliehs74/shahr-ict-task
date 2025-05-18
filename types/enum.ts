@@ -6,8 +6,8 @@ export enum EIconName {
     PRODUCTS = 'products',
     USERS = 'users',
     SELECTED_PRODUCTS = 'selectedProducts',
+    SEARCH = 'search',
 
     ADD = 'add',
     ARROW_RIGHT = 'arrowRight',
-
 }

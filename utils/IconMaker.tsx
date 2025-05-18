@@ -1,6 +1,6 @@
 import { EIconName } from "@/types/enum"
 import { IconBaseProps } from "react-icons";
-import { FaArrowRight, FaBoxOpen, FaCartPlus, FaMoon, FaShoppingCart, FaSun, FaUsers } from "react-icons/fa"
+import { FaArrowRight, FaBoxOpen, FaCartPlus, FaMoon, FaSearch, FaShoppingCart, FaSun, FaUsers } from "react-icons/fa"
 import { VscProject } from "react-icons/vsc"
 
 
@@ -16,25 +16,28 @@ const IconMaker = ({ name, props }: IconMakerProps) => {
             return <FaSun {...props} />
 
         case EIconName.MOON:
-            return <FaMoon />
+            return <FaMoon {...props} />
 
         case EIconName.ADD:
-            return <FaCartPlus />
+            return <FaCartPlus  {...props} />
 
         case EIconName.ARROW_RIGHT:
-            return <FaArrowRight />
+            return <FaArrowRight {...props} />
 
         case EIconName.PRODUCTS:
-            return < FaBoxOpen />
+            return < FaBoxOpen {...props} />
 
         case EIconName.USERS:
-            return <FaUsers />
+            return <FaUsers  {...props} />
 
         case EIconName.SELECTED_PRODUCTS:
-            return <FaShoppingCart />
+            return <FaShoppingCart  {...props} />
 
         case EIconName.HEADER_LOGO:
             return <VscProject {...props} />
+
+        case EIconName.SEARCH:
+            return <FaSearch  {...props} />
     }
 }
 

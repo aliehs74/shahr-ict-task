@@ -5,6 +5,8 @@ import IconMaker from '@/utils/IconMaker'
 import { EIconName } from '@/types/enum'
 
 const Header = () => {
+    const navTitle = ['Home', 'About', 'Contact'];
+
     return (
         <header className="dark:bg-white bg-gray-800  shadow-sm flex justify-center items-center p-4" >
             <div className='flex w-1/6'>
@@ -13,9 +15,7 @@ const Header = () => {
             </div>
 
             <nav className="flex flex-auto space-x-6 justify-center">
-                <Link href="#" className="text-gray-400 hover:text-gray-100 dark:text-gray-400 dark:hover:text-gray-900">Home</Link>
-                <Link href="#" className="text-gray-400 hover:text-gray-100 dark:text-gray-400 dark:hover:text-gray-900">About</Link>
-                <Link href="#" className="text-gray-400 hover:text-gray-100 dark:text-gray-400 dark:hover:text-gray-900">Contact</Link>
+                {navTitle.map((title, index) => <Link href="#" key={index} className="text-gray-400 hover:text-gray-100 dark:text-gray-400 dark:hover:text-gray-900">{title}</Link>)}
             </nav>
 
             <div className='flex w-1/6 justify-end'>
