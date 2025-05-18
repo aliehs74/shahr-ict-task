@@ -1,5 +1,6 @@
 import Header from "@/components/organisms/Header";
 import ProductsColumn from "@/components/organisms/ProductsColumn";
+import UsersColumn from "@/components/organisms/UsersColumn";
 
 export default function Home() {
 
@@ -9,7 +10,7 @@ export default function Home() {
       <div className="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 gap-4 md:gap-8 py-5 px-10   ">
 
         <ProductsColumn />
-        <ProductsColumn />
+        <UsersColumn />
         <ProductsColumn />
 
       </div>

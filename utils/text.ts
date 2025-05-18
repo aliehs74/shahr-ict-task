@@ -4,4 +4,6 @@ export const homepageText = {
     successRemoveProduct: "product removed successfully",
     errorGetProducts: "getting products faced an error",
     productsExplorer: "Products Explorer",
+
+    errorGetUsers: "getting  users faced an error",
 }

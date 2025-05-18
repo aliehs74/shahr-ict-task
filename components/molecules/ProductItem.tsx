@@ -3,7 +3,12 @@ import Image from "next/image";
 import IconMaker from "../../utils/IconMaker";
 import { EIconName } from "@/types/enum";
 
-export const ProductItem = ({ product, handleClick }: { product: IProduct, handleClick: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void }) => {
+interface IProductItemProps {
+    product: IProduct,
+    handleClick: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void
+}
+
+export const ProductItem = ({ product, handleClick }: IProductItemProps) => {
 
     return (
         <div className="flex items-center justify-start gap-1 cursor-pointer p-1 mb-2 rounded-lg shadow-md hover:shadow-lg transition-shadow dark:bg-gray-800 dark:hover:bg-gray-700" onClick={handleClick} >
