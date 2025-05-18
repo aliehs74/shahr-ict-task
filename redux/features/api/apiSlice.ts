@@ -4,7 +4,7 @@ import type { IUser } from '@/types/user';
 
 export const apiSlice = createApi({
   reducerPath: 'api',
-  baseQuery: fetchBaseQuery({ baseUrl: process.env.NEXT_PUBLIC_API_BASE_URL }),
+  baseQuery: fetchBaseQuery({ baseUrl: process.env.NEXT_PUBLIC_BASE_URL }),
   endpoints: (builder) => ({
     getProducts: builder.query<IProduct[], number>({
       query: (limit: number = 10) => `/products?limit=${limit}`,
