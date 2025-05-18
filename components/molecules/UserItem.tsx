@@ -19,13 +19,13 @@ export const UserItem = ({ user }: { user: IUser }) => {
           <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center
             dark:bg-gray-700">
             <span className="text-gray-600 dark:text-gray-300">
-              {user.name.firstname[0]}{user.name.lastname[0]}
+              {user?.name?.firstname}{user?.name?.lastname}
             </span>
           </div>
         </div>
         <div className="ml-4">
           <h3 className="font-semibold dark:text-white">
-            {user.name.firstname} {user.name.lastname}
+            {user?.name?.firstname} {user?.name?.lastname}
           </h3>
           <p className="text-gray-600 truncate dark:text-gray-300">
             {user.email}

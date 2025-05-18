@@ -11,6 +11,7 @@ export const ProductItem = ({ product, handleClick }: { product: IProduct, handl
                 className=" mb-4"
                 width={40}
                 height={20}
+                style={{ width: "auto", height: "auto" }}
                 src={product.image}
                 alt={product.title}
             />

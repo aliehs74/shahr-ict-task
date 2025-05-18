@@ -4,7 +4,7 @@ import IconMaker from "../../utils/IconMaker";
 import { EIconName } from "@/types/enum";
 
 const ColumnTemp = ({ title, handleSearch, handleInfiniteScroll, children }: { title: EIconName, handleSearch: (value: string) => void, handleInfiniteScroll?: (event: MouseEvent<HTMLDivElement>) => void, children: ReactNode }) => (
-    <div onScroll={handleInfiniteScroll} className="h-full flex flex-1 flex-col bg-white rounded-lg dark:bg-gray-800 p-4 ">
+    <div onScroll={handleInfiniteScroll} className="max-h-screen flex flex-1 flex-col bg-white rounded-lg dark:bg-gray-800 p-4 ">
 
         <div className="flex items-center justify-start mb-2">
             <IconMaker name={title} props={{ className: "w-5 h-5 dark:text-white mt-1" }} />
@@ -12,7 +12,7 @@ const ColumnTemp = ({ title, handleSearch, handleInfiniteScroll, children }: { t
         </div>
 
         <div className="flex items-center justify-center px-1.5 ">
-            <SearchInput placeholder={`search ${title}...`} handleSearch={(e) => handleSearch(e.target.value)} />
+            <SearchInput placeholder={`search ${title}...`} handleSearch={(e) => handleSearch(e.target.value.toString())} />
         </div>
 
         <div className=" border-b-1 border-gray-300 dark:border-gray-600 w-full  mx-auto mt-2 mb-3 -m-4 " />

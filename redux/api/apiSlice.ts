@@ -9,7 +9,7 @@ export const apiSlice = createApi({
     getProducts: builder.query<IProduct[], number>({
       query: (limit: number = 10) => `/products?limit=${limit}`,
     }),
-    getUsers: builder.query<IUser[], number>({
+    getUsers: builder.query<IUser[], void>({
       query: () => '/users', //just 10 items are available so scrolling is canceled
     }),
   }),
