@@ -3,7 +3,7 @@ import Image from "next/image";
 import IconMaker from "../../utils/IconMaker";
 import { EIconName } from "@/types/enum";
 
-interface IProductItemProps {
+export interface IProductItemProps {
     product: IProduct,
     handleClick: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void
 }
@@ -16,7 +16,6 @@ export const ProductItem = ({ product, handleClick }: IProductItemProps) => {
                 className=" mb-4"
                 width={40}
                 height={20}
-                style={{ width: "auto", height: "auto" }}
                 src={product.image}
                 alt={product.title}
             />
