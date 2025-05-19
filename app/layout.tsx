@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Provider from "@/components/templates/Provider";
-
+import PWARegister from "@/lib/pwa/PWARegister";
 
 export const metadata: Metadata = {
   title: "shahr ict task",
@@ -12,9 +12,10 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
 
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className='antialiased' >
+      <body className='antialiased ' >
         <Provider>
           {children}
+          <PWARegister />
         </Provider>
       </body>
     </html>

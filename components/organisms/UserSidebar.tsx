@@ -10,8 +10,10 @@ const UserSidebar = ({ user }: { user: IUser }) => {
     return (
         <div className="w-full min-h-[90vh] md:w-1/3">
             <div className="bg-white rounded-lg shadow overflow-hidden h-full">
-
                 <div className="bg-gray-800 h-32 relative">
+                    <Link href="\" className=" absolute top-0 left-0  ">
+                        <IconMaker name={EIconName.ARROW_RIGHT} props={{ className: "w-6 h-6 mt-2 ml-2 rotate-180", color: "white" }} />
+                    </Link>
                     <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
                         <div className="rounded-full bg-white p-1">
                             <Image
