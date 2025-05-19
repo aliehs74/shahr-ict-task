@@ -20,13 +20,13 @@ export const UserItem = ({ user, handleClick }: IUserItemProps) => {
         alt={user.username}
       />
 
-      <div className="flex flex-col w-5/6">
+      <div className="flex flex-col w-full">
 
         <h3 className="font-bold text-xs truncate max-w-[90%] dark:text-white">
           {user.name?.firstname}  {user.name?.lastname}
         </h3>
 
-        <span className="inline-block mt-2 px-2 py-1 text-xs bg-gray-100 rounded dark:bg-gray-700 dark:text-gray-400 w-[90%]">
+        <span className="inline-block mt-2 px-2 py-1 text-xs bg-gray-100 rounded dark:bg-gray-700 dark:text-gray-400 ">
           @{user.username}
         </span>
 
@@ -49,9 +49,9 @@ export const UserItem = ({ user, handleClick }: IUserItemProps) => {
             </span>
 
           </div>
-          <IconMaker name={EIconName.ARROW_RIGHT} />
         </div>
 
+        <IconMaker name={EIconName.ARROW_RIGHT} props={{ className: 'self-end' }} />
       </div>
     </div>
   );

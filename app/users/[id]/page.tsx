@@ -26,7 +26,7 @@ const Page = () => {
             <Loading />
             :
             user &&
-            <div className="max-w-6xl mx-auto p-4 bg-gray-50 min-h-screen">
+            <div className="mx-auto p-4 bg-gray-50 min-h-screen">
                 <div className="flex flex-col md:flex-row gap-6">
                     <UserSidebar user={user} />
                     <UserTab user={user} />

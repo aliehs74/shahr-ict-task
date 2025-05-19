@@ -21,17 +21,17 @@ export const ProductItem = ({ product, handleClick }: IProductItemProps) => {
                 alt={product.title}
             />
 
-            <div className="flex flex-col w-5/6">
+            <div className="flex flex-col w-[70%] lg:w-[80%] xl:w-[90%]">
 
-                <h3 className="font-bold text-xs truncate max-w-[90%] dark:text-white">
+                <h3 className="font-bold text-xs truncate  max dark:text-white">
                     {product.title}
                 </h3>
 
-                <span className="inline-block mt-2 px-2 py-1 text-xs bg-gray-100 rounded dark:bg-gray-700 dark:text-gray-400 w-[90%]">
+                <div className="mt-2 px-2 py-1 text-xs bg-gray-100 rounded dark:bg-gray-700 dark:text-gray-400 ">
                     {product.category}
-                </span>
+                </div>
 
-                <div className="flex justify-between items-center mt-2 w-[95%]">
+                <div className="flex justify-between items-center mt-2 ">
 
                     <span className="text-gray-600 dark:text-gray-400 text-xs">
                         ${product.price}
@@ -46,7 +46,6 @@ export const ProductItem = ({ product, handleClick }: IProductItemProps) => {
 
                     <IconMaker name={EIconName.ADD} />
                 </div>
-
             </div>
         </div>
     );
