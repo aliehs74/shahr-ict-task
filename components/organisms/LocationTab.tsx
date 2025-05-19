@@ -1,44 +1,29 @@
-import { IUser } from '@/types/user'
-import { singleUserText } from '@/utils/text'
-import React from 'react'
+
+import { IUser } from '@/types/user';
+import OverviewItem from '../molecules/OverviewItem';
+import { singleUserText } from '@/utils/text';
+import Map from '../molecules/Map';
 
 const LocationTab = ({ user }: { user: IUser }) => {
-    return (
-        <div>
-            <h2 className="text-xl font-semibold mb-6">{singleUserText.locationInformation}</h2>
 
-            {user.address?.geolocation ? (
-                <div className="aspect-video bg-gray-100 rounded-lg mb-6 flex items-center justify-center">
-                    <p className="text-gray-500"> {singleUserText.mapPlaceholder}:</p>
-                    <p>{singleUserText.lat}: {user.address.geolocation.lat},{singleUserText.long}: {user.address.geolocation.long}</p>
-                </div>
-            ) : (
-                <div className="aspect-video bg-gray-100 rounded-lg mb-6 flex items-center justify-center">
-                    <p className="text-gray-500"> {singleUserText.noLocation}:</p>
-                </div>
-            )}
-
-            <div className="space-y-4">
-                <div>
-                    <h3 className="font-medium text-gray-700">{singleUserText.address}</h3>
-                    <p className="text-gray-600">
-                        {user.address ?
-                            `${user.address.street || ''} ${user.address.number || ''}, ${user.address.city || ''}, ${user.address.zipcode || ''}` :
-                            singleUserText.noAddress}
-                    </p>
-                </div>
-
-                {user.address?.geolocation && (
-                    <div>
-                        <h3 className="font-medium text-gray-700"> {singleUserText.coordinates}</h3>
-                        <p className="text-gray-600">
-                            {singleUserText.lat}:{user.address.geolocation.lat}<br />
-                            {singleUserText.long}: {user.address.geolocation.long}
-                        </p>
-                    </div>
-                )}
+    if (!user.address?.geolocation?.lat || !user.address?.geolocation?.long) {
+        return (
+            <div className="flex items-center justify-center h-64 bg-gray-100 rounded-lg">
+                <p className="text-gray-500">{singleUserText.noLocation}</p>
             </div>
-        </div>)
+        );
+    }
+
+    return (
+        <>
+            <div className=" flex flex-col  space-y-2 mb-10">
+                <OverviewItem title={singleUserText.address} description={`${user.address?.street}, ${user.address?.city}, ${user.address?.zipcode}`} />
+                <OverviewItem title={singleUserText.coordinates} description={`${user.address?.geolocation?.lat}, ${user.address?.geolocation?.long}`} />
+            </div>
+            <Map user={user} />
+        </>
+    );
 }
+
 
 export default LocationTab
