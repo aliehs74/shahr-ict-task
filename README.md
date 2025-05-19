@@ -3,7 +3,7 @@
 
 ![Next.js](https://img.shields.io/badge/Next.js-15.0-black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.0-38bdf8)
+![TailwindCSS](https://img.shields.io/badge/Tailwind%20CSS-v4.x-31b5f7?style=for-the-badge&logo=tailwind-css&logoColor=ffffff)
 ![Redux](https://img.shields.io/badge/Redux-Toolkit-764abc)
 
 ## Overview
