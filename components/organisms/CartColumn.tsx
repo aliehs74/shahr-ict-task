@@ -30,7 +30,7 @@ const CartColumn = () => {
                 || product.price.toString().includes(searchParam.toLowerCase())
             ));
         }
-    }, 300); //i use debounce because of the filter almost handle by api call in backend 
+    }, 300);
 
     return (
         <ColumnTemp title={EIconName.SELECTED_PRODUCTS} handleSearch={handleSearch} >

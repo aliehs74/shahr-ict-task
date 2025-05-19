@@ -13,4 +13,10 @@ export enum EIconName {
 
     LOCATION = 'location',
     PHONE = 'phone',
+    EMAIL = 'email',
+}
+
+export enum ETabType {
+    OVERVIEW = 'overview',
+    LOCATION = 'location',
 }

@@ -12,8 +12,10 @@ export const apiSlice = createApi({
     getUsers: builder.query<IUser[], void>({
       query: () => '/users', //just 10 items are available so scrolling is canceled
     }),
+    getUserById: builder.query<IUser | null, number>({
+      query: (id: number) => `/users/${id}`,
+    }),
   }),
 });
-// i want to make a query for single user but i think hen i call all users i get repetitive data anyway
 
-export const { useGetProductsQuery, useGetUsersQuery } = apiSlice;
+export const { useGetProductsQuery, useGetUsersQuery, useGetUserByIdQuery } = apiSlice;
